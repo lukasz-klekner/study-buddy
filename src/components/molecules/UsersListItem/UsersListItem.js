@@ -1,14 +1,17 @@
+import Button from '../../atoms/Button/Button';
+import { Wrapper, StyledGrade, StyledInfo } from './UsersListItem.style';
+
 import PropTypes from 'prop-types';
 
 const UsersListItem = ({ userData: { name, attendance = '0%', average } }) => (
-  <li>
-    <div>{average}</div>
-    <div>
+  <Wrapper>
+    <StyledGrade average={average}>{average}</StyledGrade>
+    <StyledInfo>
       <p>{name}</p>
       <p>{attendance}</p>
-    </div>
-    <button>X</button>
-  </li>
+    </StyledInfo>
+    <Button />
+  </Wrapper>
 );
 
 UsersListItem.propTypes = {
