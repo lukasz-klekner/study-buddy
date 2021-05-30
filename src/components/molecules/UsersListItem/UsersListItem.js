@@ -3,14 +3,14 @@ import { Wrapper, StyledGrade, StyledInfo } from './UsersListItem.style';
 
 import PropTypes from 'prop-types';
 
-const UsersListItem = ({ userData: { name, attendance = '0%', average } }) => (
+const UsersListItem = ({ deleteUser, userData: { name, attendance = '0%', average } }) => (
   <Wrapper>
     <StyledGrade average={average}>{average}</StyledGrade>
     <StyledInfo>
       <p>{name}</p>
       <p>{attendance}</p>
     </StyledInfo>
-    <Button />
+    <Button onClick={() => deleteUser(name)} />
   </Wrapper>
 );
 
