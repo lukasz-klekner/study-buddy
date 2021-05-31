@@ -1,4 +1,4 @@
-import Button from '../../atoms/Button/Button';
+import DeleteButton from '../../atoms/DeleteButton/DeleteButton';
 import { Wrapper, StyledGrade, StyledInfo } from './UsersListItem.style';
 
 import PropTypes from 'prop-types';
@@ -10,7 +10,7 @@ const UsersListItem = ({ deleteUser, userData: { name, attendance = '0%', averag
       <p>{name}</p>
       <p>{attendance}</p>
     </StyledInfo>
-    <Button onClick={() => deleteUser(name)} />
+    <DeleteButton onClick={() => deleteUser(name)} />
   </Wrapper>
 );
 
