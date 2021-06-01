@@ -7,6 +7,7 @@ import { theme } from '../assets/styles/theme';
 import UsersList from '../components/organisms/UsersList/UsersList';
 import Form from '../components/organisms/Form/Form';
 import { users as usersData } from '../data/users';
+import { Wrapper } from './Root.style';
 
 const initialFormState = {
   name: '',
@@ -63,14 +64,5 @@ const Root = () => {
     </Router>
   );
 };
-
-const Wrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.lightGrey};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-`;
 
 export default Root;

@@ -1,14 +1,15 @@
 import UsersListItem from '../../molecules/UsersListItem/UsersListItem';
-import { Wrapper } from './UsersList.style';
+import { Wrapper, StyledList, StyledTitle } from './UsersList.style';
 
 const UsersList = ({ users, deleteUser }) => (
   <>
     <Wrapper>
-      <ul>
+      <StyledTitle>Students list</StyledTitle>
+      <StyledList>
         {users.map((user) => (
           <UsersListItem key={user.name} userData={user} deleteUser={deleteUser} />
         ))}
-      </ul>
+      </StyledList>
     </Wrapper>
   </>
 );
